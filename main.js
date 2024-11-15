@@ -34,3 +34,5 @@ window.addEventListener('click', function(e) {
         e.target.click();
     }
 });
+
+alert("Quick notice: The website will soon undergo a major transformation, so everything you see here is subject to change.")
