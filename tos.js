@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (alle === true) {
         alle = false;
-        alert('Oops! It seems your finger took a little detour and opted you in! By GDPR decree, we must inform you that you can still opt-out. Just so you know, we\'re all about compliance and fairness here!');
+        alert('Oops! Due to annoying GDPR law, we MUST inform you that you can still opt-out. Just so you know, we\'re all about compliance and fairness here!');
     }
 
     function moveButton() {
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showAcceptMessage() {
-        alert('Due to GDPR, you have got to opt out before proceeding');
+        alert('Thank you for accepting, we are currently using all available data on you to hold indefinitely to serve you personalised adverts. You may opt out any time!');
     }
 
     goBackButton.addEventListener('click', () => {
-        window.location.href = 'terminal.html';
+        window.location.href = 'projects.izak.uk';
     });
 
     goBackButtonMobile.addEventListener('click', () => {
-        window.location.href = 'terminal.html';
+        window.location.href = 'projects.izak.uk';
     });
 });
