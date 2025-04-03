@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     goBackButton.addEventListener('click', () => {
-        window.location.href = 'projects.izak.uk';
+        window.location.href = 'https://projects.izak.uk/';
     });
 
     goBackButtonMobile.addEventListener('click', () => {
-        window.location.href = 'projects.izak.uk';
+        window.location.href = 'https://projects.izak.uk/';
     });
 });
