@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/favicon.png" type="image/png">
+    <title>Incorrect ICT Advice</title>
+    <link rel="stylesheet" href="fun.css">
+  </head>
+  <body>
+    <header class="top-banner" style="margin-top: 0px;">
+      <h1>ICT Advice Generator*</h1>
+      <br>
+      <p><a href="https://projects.izak.uk/">Go Back</a></p>
+    </header>
+    
+    <main>
+      <div id="quote-container">  <! -- this entire web page is an intentional mess -->
+        <h2>ICT Advice</h2>
+        <br>
+        <p>An ICT department's worse nightmare</p>
+		<p>This is satire, don't follow it.</p>
+        <p id="quote"></p>
+        <button id="generate-button">Teach me about computering</button>
+      </div>
+    </main>
+  
+    <footer>
+      <p>Just In Case Disclaimer: This is a satirical website for ICT professionals and the information is misleading.</p>
+      <p>Do not follow ANY of the information, I am not accountable for your actions.</p>
+    </footer>
+    
+    <script>
+      const quotes = [
+        'Ransomware is safe because it encrypts your files.',
+        'Using the same password for all accounts is convenient and ensures you won\'t forget it.',
+        'Disabling encryption on your devices makes them run faster and isn\'t a security risk.',
+        'Turning off your firewall will speed up your internet and is safe because firewalls are unnecessary.',
+        'Ignoring software updates will keep your computer from slowing down.',
+        'leaving your admin password as "admin" is secure and easy to remember.',
+        'Using "password" or "123456" as your password is easy to remember and sufficient for security.',
+        'If a pop-up says your computer is infected, immediately download the recommended software from that pop-up.',
+        'Turning off two-factor authentication makes logging in much faster without compromising security.',
+        'Storing your passwords in a text file named "passwords.txt" on your desktop is a secure method.',
+        'Allowing all apps to access your location and data ensures they work better.',
+        'It\'s okay to send your credit card information via email as long as you trust the recipient.',
+        'Using outdated software is fine if it still works; updates are just for adding unnecessary features.',
+        'If you get a call from someone claiming to be tech support, give them remote access to your computer right away.',
+        'Disabling your device\'s security features helps it run faster and isn\'t risky.',
+        'Free public USB charging stations are safe to use without any concerns.',
+        'You can trust any app from an app store because they wouldn\'t allow harmful apps.',
+        'Disregarding any security notifications from your operating system saves time and effort as they\'re always false positives.',
+        'It\'s safe to click on shortened URLs from unknown sources since they make sharing links easier.',
+        'Using simple security questions like "What is your favorite colour?" is good enough for account recovery.',
+        'Disabling automatic backups saves space and isn\'t necessary if you manually save important files sometimes.',
+        'Writing your passwords on sticky notes and placing them around your monitor is a convenient method, especially in a workplace.',
+        'You don\'t need to worry about security if you only visit well-known websites.',
+        'Accepting friend requests from people you don\'t know on social media is safe and helps you network.',
+        'If an email looks official, it’s safe to provide personal information without verifying the sender.',
+        'Posting your personal information on social media is harmless and makes you more social.',
+        'Using public computers for online banking and shopping is convenient and secure.',
+        'Giving out your personal information over the phone to unsolicited callers is safe if they sound professional.',
+        'Downloading cracks and keygens for software is a great, legal way to save money without risks.',
+        'Leaving your devices unlocked in public places is safe because people are generally trustworthy.',
+        'If you receive a security warning while browsing, it\'s probably a false alarm and can be ignored.',
+        'Backing up your data isn\'t necessary if you store everything on a single, reliable device.',
+        'Installing browser extensions from unknown sources is safe if they claim to enhance your browsing experience.',
+        'Disabling your browser\'s pop-up blocker makes for a more seamless browsing experience without security risks.',
+        'Turning off encryption on your home Wi-Fi network makes it easier for guests to connect.',
+        'Storing sensitive information in your email inbox is a secure method.',
+        'Allowing your browser to remember all your passwords is safe and convenient.',
+        'Using the same username and password combination for different accounts helps keep things simple and manageable.',
+        'Not using a password on your home Wi-Fi network makes it easier for you and your guests to connect.',
+        'Opening links in SMS messages from unknown numbers is safe if the message seems urgent.',
+        'You don\'t need to secure your IoT devices because they don\'t store sensitive information.',
+        'Using a simple PIN like "0000" or "1234" for your devices is convenient and secure enough.',
+        'It\'s safe to use your birthdate or a family member\'s name as your password.',
+        'Disabling automatic updates for your operating system prevents annoying restarts and isn\'t risky.',
+        'Allowing apps to access all your data and contacts ensures they function properly without security concerns.',
+        'Responding to online surveys with personal information is safe if they offer a chance to win a prize.',
+        'Using public file-sharing services for confidential documents is convenient and secure.',
+        'If a website asks for your credit card information for age verification, it\'s safe to provide it.',
+        'Turning off browser security settings improves your browsing speed and isn\'t a major risk.',
+        'Storing sensitive documents in your email drafts folder is a secure way to keep them accessible.',
+        'You don\'t need to worry about securing your home network if you live in a safe neighborhood.',
+        'Disabling your device\'s lock screen makes it more convenient to use and isn\'t a security risk.',
+        'Trusting all browser pop-ups is safe if they look professional and well-designed.',
+        'Using outdated plugins and extensions in your browser is fine if they still work.',
+        'Sharing your Wi-Fi password with neighbors is a good way to build community trust.',
+        'Leaving your devices connected to public Wi-Fi networks all the time is convenient and safe.',
+        'Ignoring spam emails is good enough; you don\'t need to delete them from your inbox.',
+        'Downloading email attachments from unknown sources is safe if they seem important.',
+        'Using your work email for personal accounts and vice versa is convenient and doesn\'t pose security risks.',
+        'Disabling security features on your router ensures a faster internet connection without compromising security.',
+        'If a website requires you to disable your antivirus to proceed, it\'s okay to do so temporarily.',
+        'Ignoring encryption for your sensitive data is fine if you trust the people around you.',
+        'If a website asks for your password to verify your identity, it\'s safe to provide it.',
+	'If you find a USB drive in public, take it to a computer as it is the safest option since it\'ll have the contact details of the owner on it',
+      ];
+      
+      const quoteEl = document.getElementById("quote");
+      const generateBtn = document.getElementById("generate-button");
+      
+      generateBtn.addEventListener("click", generateQuote);
+      
+      function generateQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomQuote = quotes[randomIndex];
+        quoteEl.textContent = randomQuote;
+      }
+    </script>
+  
+
+</body></html>

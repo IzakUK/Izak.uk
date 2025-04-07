@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #ff0000;
+  --transition-time: 0.5s;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 1px;
+}
+
+body {
+  font-family: "Comic Sans MS", "Comic Sans", "Gill Sans", recursive; <! –– I don't think you know how long I laughed at this after I applied it ––> 
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: background-color var(--transition-time) ease-in-out;
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 6rem);
+}
+
+#quote-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#quote {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+#generate-button {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-time) ease-in-out;
+}
+
+#generate-button:hover {
+  background-color: #990000;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
+
+header {
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.top-banner {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-banner h1 {
+  margin: 0;
+}
+
+.top-banner a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-banner a:hover {
+    color: #FF0004;
+
+}
+
+.top-banner .logo {
+  height: 50px;
+}
+
+.top-banner .donate-button {
+  margin-left: auto;
+}
+
+@media (max-width: 880px), (max-height: 710px) {
+  .top-banner {
+	display: none;	
+	}
+}
+@media (max-width: 880px), (max-height: 710px) {
+  footer {
+    display: none;
+  }
+
+  } <! –– This code is from another project, I added mobile support and haven't really optimised it as it really isn't necessary, have a blast on this website ––> 
+}

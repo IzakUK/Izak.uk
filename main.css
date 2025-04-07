@@ -1,0 +1,49 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: black;
+    color: #FFE2A9; <!-- The business card colours are in this, so I ADAPT-->
+    font-family: Arial;
+    scroll-snap-type: y mandatory; <!-- Allows the website to snap -->"
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: start;
+    cursor: pointer;
+    font-size: xxx-large
+}
+
+.flag-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.flag {
+    width: 100px;
+    height: 50px;
+    transition: transform 0.5s;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-flag {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+.transitionIntro { animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

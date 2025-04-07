@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; /* Prevent scrolling X Give me that back bitch >:)*/
+    flex-wrap: wrap;
+}
+
+.section {
+    cursor: pointer;
+
+.background-art {
+
+
+.background-art pre {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(221, 221, 221);
+    white-space: pre-wrap; /* Ensures the ASCII art respects whitespace */
+}
+
+.container {
+
+    box-sizing: border-box;
+}
+
+.header, .content, .footer {
+    text-align: center;
+}
+
+.header h1, .content h2, .footer h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500; /* Set font weight to medium for in-between heaviness */
+    margin: 0; /* Remove default margin */
+}
+
+.header h1 {
+    font-size: 2rem; /* Adjust size as needed */
+}
+
+.content h2, .footer h2 {
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.footer a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

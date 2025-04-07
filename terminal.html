@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/favicon.png" type="image/png">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="output" id="output"><div>&gt; Welcome to the terminal! Use help for a list of available commands.</div>
+	<div>Important commands:
+- help-fun: Exclusively shows the interactive pages.
+- index: Go back to index.html
+- clear: Clears the terminal</div></div>
+        <div class="input-line">
+            <span class="prompt">&gt;</span>
+            <div class="input-container">
+                <input type="text" id="commandInput" autocomplete="off" autofocus="">
+                <span class="cursor" id="cursor" style="left: 0ch; width: 10px; border-right-style: solid; border-right-width: 0px; height: 15px;">|</span>
+            </div>
+        </div>
+    </div>
+    <script src="terminal.js"></script>
+
+
+</body></html>
